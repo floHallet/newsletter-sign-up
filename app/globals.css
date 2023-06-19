@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("/font/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("/font/Roboto-Bold.ttf");
+}
+
+
+:root {
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --Charcoal0Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+}
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    
   }
 }
+*/
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Roboto-Regular;
+  background-color: var(--Charcoal0Grey);
+}
+
+h1 {
+  font-family: Roboto-Bold;
+}
+
+#success {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
