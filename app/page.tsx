@@ -4,29 +4,29 @@ export default function Home() {
   return (
     <>
       <main className="grid place-items-center min-h-screen">
-        <section className="flex bg-white p-5 rounded-3xl">
-          <form action="" className='max-w-md py-7 px-10 pr-12 flex flex-col place-content-center'>
-            <h1 className="text-5xl py-4 tracking-normal text-blue-950">Stay updated!</h1>
+        <section className="flex flex-col-reverse lg:flex-row bg-white lg:p-5 rounded-3xl shadow-2xl">
+          <form action="" className='max-w-sm lg:max-w-md m-auto p-6 lg:py-7 lg:px-10 lg:pr-12 flex flex-col place-content-center'>
+            <h1 className="text-[2.5rem] lg:text-[3.2rem] py-3 tracking-[.015em] text-blue-950">Stay updated!</h1>
 
             <p className="text-base py-2.5">Join 60,000+ product managers receiving monthly updates on:</p>
 
             <ul className='my-2'>
-              <li className="text-base py-1"><Image
-                className='inline mr-4'
+              <li className="text-base py-1 flex"><Image
+                className='mr-4 mt-1 place-self-start'
                 src="/images/icon-list.svg" // Route of the image file
                 height={16} // Desired size with correct aspect ratio
                 width={16} // Desired size with correct aspect ratio
                 alt="a picture"
               />Product discovery and building what matters</li>
-              <li className="text-base py-1"><Image
-                className='inline mr-4'
+              <li className="text-base py-1 flex"><Image
+                className='mr-4 mt-1 place-self-start'
                 src="/images/icon-list.svg" // Route of the image file
                 height={16} // Desired size with correct aspect ratio
                 width={16} // Desired size with correct aspect ratio
                 alt="a picture"
               />Measuring to ensure updates are a success</li>
-              <li className="text-base py-1"><Image
-                className='inline mr-4'
+              <li className="text-base py-1 flex"><Image
+                className='mr-4 mt-1 place-self-start'
                 src="/images/icon-list.svg" // Route of the image file
                 height={16} // Desired size with correct aspect ratio
                 width={16} // Desired size with correct aspect ratio
@@ -36,38 +36,32 @@ export default function Home() {
 
             <div className="flex flex-col py-5 gap-5">
               <div className='flex flex-col'>
-                <label className="py-1.5 text-xs font-bold" htmlFor="email-address">Email address</label>
-                
-                <input className="peer min-w-0 flex-auto rounded-md ring-gray-300 p-3 pl-5 shadow-sm ring-2 ring-inset ring-white/10 hover:ring-gray-500 focus:ring-2 focus:ring-inset focus:ring-black invalid:ring-rose-500 invalid:text-rose-600" name='email' id='email-address' type="email" autoComplete="email" required placeholder='email@company.com' />
-                <p className="mt-2 invisible peer-invalid:visible text-rose-500 text-sm">
-                  Please provide a valid email address.
-                </p>
+                <label className="py-1.5 text-xs font-bold text-blue-950" htmlFor="email-address">Email address</label>
+                <input className="min-w-0 flex-auto rounded-md outline-none text-blue-950 ring-gray-400 p-3 pl-5 shadow-sm ring-1 hover:ring-gray-600 focus:ring-gray-800 placeholder:text-gray-400" name='email' id='email-address' type="email" autoComplete="email" required placeholder='email@company.com' />
               </div>
-              <button className=" flex-none rounded-md bg-gradient-to-r from-blue-950 to-blue-950 p-3 text-sm font-semibold text-white shadow-sm hover:from-rose-500 hover:to-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" type="submit">Subscribe to monthly newsletter</button>
+              <button className="rounded-md bg-gradient-to-r from-blue-950 tracking-wide to-blue-950 p-4 text-sm font-semibold text-white hover:from-rose-500 hover:to-orange-600 hover:shadow-lg hover:shadow-orange-600 focus:shadow-blue-950" type="submit">Subscribe to monthly newsletter</button>
             </div>
           </form>
-          <Image
-            className='rounded-none'
+          
+          <div className='max-h-72 overflow-hidden rounded-2xl lg:max-h-none'>
+            <Image
             src="/images/illustration-sign-up-desktop.svg" // Route of the image file
-            height={384} // Desired size with correct aspect ratio
-            width={384} // Desired size with correct aspect ratio
+            height={593} // Desired size with correct aspect ratio
+            width={400} // Desired size with correct aspect ratio
             alt="a picture"
           />
+          </div>
         </section>
-        <div id="success">
+
+        <section id="success">
           <h1>Thanks for subscribing!</h1>
 
           <p>A confirmation email has been sent to ash@loremcompany.com.
             Please open it and click the button inside to confirm your subscription.</p>
 
           <button>Dismiss message</button>
-        </div>
+        </section>
       </main>
-
-      <div className="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">floHal</a>.
-      </div>
     </>
   )
 }

@@ -17,6 +17,7 @@
   --DarkSlateGrey: hsl(234, 29%, 20%);
   --Charcoal0Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
+  --Tomato: hsl(4, 100%, 67%);
 }
 
 /*
@@ -38,13 +39,4 @@ h1 {
 
 #success {
   display: none;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
