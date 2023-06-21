@@ -12,7 +12,7 @@ export default function Home() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault()
-    if (!email || error) {
+    if (!email) {
       setError(true)
       const emailInput = document.getElementById("email-address")
       if (emailInput && !emailInput.className.includes("invalid:")) {
@@ -30,12 +30,13 @@ export default function Home() {
       setEmail(emailInput.value) 
       setError(false)
     } else {
-      setError(true)
+      setEmail('')
+      /*setError(true)
       if (!emailInput.className.includes("invalid:")) {
         emailInput.classList.add("invalid:bg-rose-100")
         emailInput.classList.add("invalid:ring-rose-400")
         emailInput.classList.add("invalid:text-rose-400")
-      }
+      }*/
     }
   }
 
